@@ -19,18 +19,11 @@ public class Main {
 
         String[] arr = input.split("[+\\-*/]");
 
-
-        //if (arr.length !=4) {
-           // throw new Exception("No");
-        //}
-
         String a1 = arr[0];
         String a = a1.trim();
         String b1 = arr[1];
         String b = b1.trim();
         String c = oper(input);
-
-
 
         String [] aa = a.split("");
         int lastIndexA = aa.length - 1;
@@ -38,12 +31,8 @@ public class Main {
             throw new Exception ("NOT");
         }
 
-
-
         String [] bb = b.split("");
         int lastIndexB = bb.length - 1;
-
-
 
         if (!bb[0].equals("\"") && !bb[lastIndexB].equals("\"") && (c.equals("/") || c.equals("*")) && lastIndexB <= 10) {
             return (calcUmnoDel(c, a, b));
@@ -122,8 +111,7 @@ public class Main {
             return "\"" + del + "\"";
         } else throw new Exception("Not");
     }
-
-
+    
     public static int e(String b) throws Exception {
 
         String[] arr = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
